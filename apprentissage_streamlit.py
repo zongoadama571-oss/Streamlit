@@ -1,46 +1,48 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-##################################### Mettre un titre 
-#st.title("Ma premiere application streamlit")
+##################################### Mettre un titre principale
+st.title("Ma premiere application streamlit")
 ##################################### Afficher du texte, nombre, tableau ou graphique
-#st.write("bonjour j'apprends streamlit !")
+st.write("bonjour j'apprends streamlit !")
 
-##################################### Pemettre a l'utilisateur d'interagire
-#nom = st.text_input("Entrez votre nom")
-#age = st.number_input("Entrez votre age")
+##################################### Pemettre a l'utilisateur d'interagire 
+nom = st.text_input("Entrez votre nom")
+age = st.number_input("Entrez votre age")
 ##################################### Bouton
-#if st.button("Valider"):
-    #st.write("Bonjour",nom,"Vous avez :",str(age) + "ans") 
+if st.button("Valider"):
+    st.write("Bonjour",nom,"Vous avez :",str(age) + "ans") 
 
 
-#st.title("Application interactive")
+##################################### Mettre un titre principale
+st.title("Application interactive")
 ##################################### Menu deroulante
-#ville = st.selectbox("Choisissez une ville",["Ouagadougou","Bobo-dioulasso","Koudougou"])
+ville = st.selectbox("Choisissez une ville",["Ouagadougou","Bobo-dioulasso","Koudougou"])
 ##################################### Case a cocher
-#afficher = st.checkbox("Afficher un message")
+afficher = st.checkbox("Afficher un message")
 ##################################### Slider
-#age = st.slider("Choisissez votre age", 0, 100, 25)  #0=min 100=max et 25=valeur par defaut
+age = st.slider("Choisissez votre age", 0, 100, 25)  #0=min 100=max et 25=valeur par defaut
 #####################################Affichage
-#st.write("Ville choisie :", ville)
-#st.write("age :", age)
-#if afficher:
-    #st.write("Bienvenue dans l'application !")
+st.write("Ville choisie :", ville)
+st.write("age :", age)
+if afficher:
+    st.write("Bienvenue dans l'application !")
 
 
-#st.title("Analyse de fichier CSV")
+##################################### Mettre un titre principale
+st.title("Analyse de fichier CSV")
 #####################################Cree un bouton pour importer un fichier
-#fichier = st.file_uploader("Choisissez un fichier CSV", type = "csv")
-#if fichier is not None:
-    #df = pd.read_csv(fichier, sep = ";") #Lecture du fichier
-    #st.write("Apercu des donnees :")
-    #st.dataframe(df) #Affichage des donnees
+fichier = st.file_uploader("Choisissez un fichier CSV", type = "csv")
+if fichier is not None:
+    df = pd.read_csv(fichier, sep = ";") #Lecture du fichier
+    st.write("Apercu des donnees :")
+    st.dataframe(df) #Affichage des donnees
     #Infos sur les donnees
-    #st.write("Nombre de lignes :",df.shape[0])
-    #st.write("Nombre de colonnes :",df.shape[1])
+    st.write("Nombre de lignes :",df.shape[0])
+    st.write("Nombre de colonnes :",df.shape[1])
 
 
-#Titre
+###################################### Mettre un titre principale
 st.title("Dashboard économique interactif")
 # Charger fichier
 fichier = st.file_uploader("Importer un fichier EXCEL", type="XLSX")
